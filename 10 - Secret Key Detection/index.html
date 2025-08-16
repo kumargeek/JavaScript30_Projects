@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Key Detection</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="icon" href="https://fav.farm/🔥" />
+</head>
+
+<body>
+  <H1 style="text-align: center;">
+    Open the Console and press any key to guess the SECRET CODE
+  </H1>
+  <script>
+    let pressed = []
+    const secretCode = "raven"
+    document.addEventListener('keydown', function (e) {
+      let char = e.key
+      pressed.push(char)
+
+      pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length)
+      console.log("Code Entered: " + pressed.join(' '))
+
+      if (pressed.join("").includes(secretCode)) {
+        console.log("Ding Ding")
+        Swal.fire('🎉 Secret code unlocked!', 'Welcome to the secret zone!', 'success')
+      }
+    })
+  </script>
+</body>
+
+</html>
