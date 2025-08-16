@@ -1,0 +1,41 @@
+body {
+  background: #222;
+  color: white;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.keys {
+  display: flex;
+}
+
+.key {
+  border: 0.2rem solid white;
+  margin: 1rem;
+  padding: 1rem 2rem;
+  text-align: center;
+  transition: all 0.07s ease;
+  width: 100px;
+  border-radius: 5px;
+  background: #444;
+  box-shadow: 0 0 10px #000;
+}
+
+.key.playing {
+  transform: scale(1.1);
+  border-color: #f39c12;
+  box-shadow: 0 0 20px #f39c12;
+}
+
+kbd {
+  display: block;
+  font-size: 2rem;
+}
+
+.sound {
+  font-size: 0.85rem;
+  color: #ccc;
+}
